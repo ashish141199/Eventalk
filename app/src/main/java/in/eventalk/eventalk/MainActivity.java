@@ -39,9 +39,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         FacebookSdk.sdkInitialize(getApplicationContext());
-        ImageView image = new ImageView(MainActivity.this);
+
         Log.i("ascasc", "Access Token:"+AccessToken.getCurrentAccessToken());
-        if (AccessToken.getCurrentAccessToken()==null){
+        if (Profile.getCurrentProfile()==null){
             goLoginScreen();
         }
         else{
